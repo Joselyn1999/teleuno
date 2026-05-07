@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teleuno — Equipamiento Hotelero en Mallorca</title>
+  <title>Almacenes Jyrtyc — Distribuidor Mayorista de Mercería en Madrid</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -17,59 +17,51 @@
     /* ===================================================
        RESET & VARIABLES
     =================================================== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --celeste:       #38BDF8;
-      --celeste-dark:  #0EA5E9;
-      --celeste-deep:  #0369A1;
-      --white:         #FFFFFF;
-      --grey-50:       #F8FAFC;
-      --grey-100:      #F1F5F9;
-      --grey-200:      #E2E8F0;
-      --grey-400:      #94A3B8;
-      --grey-600:      #475569;
-      --grey-800:      #1E293B;
-      --grey-900:      #0F172A;
+      --azul:        #2563EB;
+      --azul-dark:   #1D4ED8;
+      --azul-light:  #EFF6FF;
+      --azul-mid:    #BFDBFE;
+      --gris-50:     #F8FAFC;
+      --gris-100:    #F1F5F9;
+      --gris-200:    #E2E8F0;
+      --gris-400:    #94A3B8;
+      --gris-600:    #475569;
+      --gris-800:    #1E293B;
+      --gris-900:    #0F172A;
+      --blanco:      #FFFFFF;
 
       --font-body:    'Inter', sans-serif;
-      --font-heading: 'Syne', sans-serif;
+      --font-head:    'Manrope', sans-serif;
 
-      --radius-sm:  6px;
-      --radius-md:  12px;
-      --radius-lg:  20px;
-      --radius-xl:  32px;
+      --r-sm:  6px;
+      --r-md:  12px;
+      --r-lg:  18px;
+      --r-xl:  28px;
 
-      --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
-      --shadow-md:  0 4px 20px rgba(14,165,233,.12);
-      --shadow-lg:  0 10px 40px rgba(14,165,233,.18);
-      --shadow-card:0 2px 12px rgba(0,0,0,.07);
+      --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:  0 4px 20px rgba(37,99,235,.10);
+      --shadow-lg:  0 10px 40px rgba(37,99,235,.14);
 
       --nav-h: 64px;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: var(--nav-h);
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
 
     body {
       font-family: var(--font-body);
-      background: var(--white);
-      color: var(--grey-800);
+      background: var(--blanco);
+      color: var(--gris-800);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    img { display: block; max-width: 100%; }
-    a   { text-decoration: none; color: inherit; }
+    a { text-decoration: none; color: inherit; }
 
     /* ===================================================
-       UTILITY CLASSES
+       UTILIDADES
     =================================================== */
     .container {
       width: 100%;
@@ -78,111 +70,114 @@
       padding: 0 20px;
     }
 
-    .section-tag {
+    .tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-size: .75rem;
+      gap: 7px;
+      font-size: .73rem;
       font-weight: 600;
-      letter-spacing: .1em;
+      letter-spacing: .09em;
       text-transform: uppercase;
-      color: var(--celeste-dark);
-      background: rgba(56,189,248,.10);
-      border: 1px solid rgba(56,189,248,.25);
+      color: var(--azul);
+      background: var(--azul-light);
+      border: 1px solid var(--azul-mid);
       border-radius: 99px;
       padding: 5px 14px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-family: var(--font-head);
+      font-size: clamp(1.75rem, 3.5vw, 2.6rem);
       font-weight: 800;
-      color: var(--grey-900);
+      color: var(--gris-900);
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .section-sub {
-      font-size: 1.05rem;
-      color: var(--grey-600);
-      max-width: 600px;
-      line-height: 1.7;
+      font-size: 1rem;
+      color: var(--gris-600);
+      max-width: 580px;
+      line-height: 1.72;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .section-header .section-sub {
-      margin: 0 auto;
-    }
+    .section-header { text-align: center; margin-bottom: 52px; }
+    .section-header .section-sub { margin: 0 auto; }
 
     /* ===================================================
-       ANIMACIONES DE ENTRADA (IntersectionObserver)
+       ANIMACIONES DE ENTRADA
     =================================================== */
     .fade-up {
       opacity: 0;
-      transform: translateY(36px);
-      transition: opacity .65s ease, transform .65s ease;
+      transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease;
     }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .fade-up:nth-child(2) { transition-delay: .1s; }
-    .fade-up:nth-child(3) { transition-delay: .2s; }
-    .fade-up:nth-child(4) { transition-delay: .3s; }
-    .fade-up:nth-child(5) { transition-delay: .4s; }
-    .fade-up:nth-child(6) { transition-delay: .5s; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up:nth-child(2) { transition-delay: .08s; }
+    .fade-up:nth-child(3) { transition-delay: .16s; }
+    .fade-up:nth-child(4) { transition-delay: .24s; }
+    .fade-up:nth-child(5) { transition-delay: .32s; }
+    .fade-up:nth-child(6) { transition-delay: .40s; }
 
     /* ===================================================
        NAVBAR
     =================================================== */
     #navbar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 1000;
       height: var(--nav-h);
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--grey-200);
+      background: rgba(255,255,255,.93);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gris-200);
       transition: box-shadow .3s;
     }
 
-    #navbar.scrolled {
-      box-shadow: 0 4px 24px rgba(0,0,0,.08);
-    }
+    #navbar.scrolled { box-shadow: 0 3px 20px rgba(0,0,0,.07); }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      gap: 12px;
+      gap: 10px;
     }
 
     /* Logo */
     .nav-logo {
       display: flex;
       align-items: center;
+      gap: 9px;
       flex-shrink: 0;
     }
 
-    .nav-logo-img {
-      height: 38px;
-      width: auto;
-      object-fit: contain;
-      display: block;
+    .nav-logo-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-dark) 100%);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--font-head);
+      font-size: .95rem;
+      font-weight: 800;
+      letter-spacing: -.5px;
     }
 
-    /* Tabs */
+    .nav-logo-text {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--gris-900);
+    }
+
+    .nav-logo-text span { color: var(--azul); }
+
+    /* Pestañas */
     .nav-tabs {
       display: flex;
       align-items: center;
@@ -193,17 +188,16 @@
       flex: 1;
       justify-content: flex-end;
     }
-
     .nav-tabs::-webkit-scrollbar { display: none; }
 
     .nav-tab {
       position: relative;
       white-space: nowrap;
-      padding: 8px 14px;
-      font-size: .87rem;
+      padding: 7px 13px;
+      font-size: .85rem;
       font-weight: 500;
-      color: var(--grey-600);
-      border-radius: var(--radius-sm);
+      color: var(--gris-600);
+      border-radius: var(--r-sm);
       cursor: pointer;
       border: none;
       background: transparent;
@@ -214,32 +208,22 @@
     .nav-tab::after {
       content: '';
       position: absolute;
-      bottom: 4px;
+      bottom: 3px;
       left: 50%;
       transform: translateX(-50%) scaleX(0);
-      width: 60%;
+      width: 55%;
       height: 2px;
-      background: var(--celeste-dark);
+      background: var(--azul);
       border-radius: 99px;
       transition: transform .25s ease;
     }
 
-    .nav-tab:hover {
-      color: var(--celeste-dark);
-      background: rgba(56,189,248,.07);
-    }
-
-    .nav-tab.active {
-      color: var(--celeste-dark);
-      font-weight: 600;
-    }
-
-    .nav-tab.active::after {
-      transform: translateX(-50%) scaleX(1);
-    }
+    .nav-tab:hover { color: var(--azul); background: var(--azul-light); }
+    .nav-tab.active { color: var(--azul); font-weight: 600; }
+    .nav-tab.active::after { transform: translateX(-50%) scaleX(1); }
 
     /* ===================================================
-       SECCIÓN 1 — HERO  (#inicio)
+       SECCIÓN 1 — HERO (#inicio)
     =================================================== */
     #inicio {
       position: relative;
@@ -248,230 +232,206 @@
       align-items: center;
       padding: calc(var(--nav-h) + 60px) 0 80px;
       overflow: hidden;
-      background: var(--grey-900);
+      background: var(--gris-900);
     }
 
-    /* Fondo decorativo */
     .hero-bg {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(56,189,248,.18) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(14,165,233,.12) 0%, transparent 55%),
-        linear-gradient(160deg, #0F172A 0%, #0369A1 60%, #0F172A 100%);
+        radial-gradient(ellipse 70% 55% at 65% 45%, rgba(37,99,235,.22) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 15% 75%, rgba(37,99,235,.10) 0%, transparent 55%),
+        linear-gradient(150deg, #0F172A 0%, #1E3A5F 55%, #0F172A 100%);
     }
 
-    /* Grid decorativo tipo circuito */
-    .hero-grid {
+    .hero-dots {
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(56,189,248,.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,.06) 1px, transparent 1px);
-      background-size: 50px 50px;
+      background-image: radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 28px 28px;
     }
 
-    /* Forma decorativa flotante */
-    .hero-shape {
+    /* Forma decorativa derecha — hilo/bobina estilizada */
+    .hero-deco {
       position: absolute;
-      right: -80px;
+      right: 5%;
       top: 50%;
       transform: translateY(-50%);
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(56,189,248,.15) 0%, transparent 70%);
+      width: 380px;
+      height: 380px;
       pointer-events: none;
     }
 
-    .hero-shape-2 {
+    .hero-deco-ring {
       position: absolute;
-      right: 80px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 360px;
-      height: 360px;
-      border: 1px solid rgba(56,189,248,.15);
       border-radius: 50%;
-      pointer-events: none;
-      animation: pulse-ring 4s ease-in-out infinite;
+      border: 1px solid rgba(37,99,235,.25);
     }
 
-    .hero-shape-3 {
+    .hero-deco-ring:nth-child(1) { inset: 0; animation: spin-slow 18s linear infinite; }
+    .hero-deco-ring:nth-child(2) { inset: 40px; border-color: rgba(37,99,235,.18); animation: spin-slow 12s linear infinite reverse; }
+    .hero-deco-ring:nth-child(3) { inset: 90px; border-color: rgba(37,99,235,.35); }
+
+    .hero-deco-center {
       position: absolute;
-      right: 160px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 200px;
-      height: 200px;
-      border: 1px solid rgba(56,189,248,.25);
+      inset: 130px;
+      background: radial-gradient(circle, rgba(37,99,235,.3) 0%, transparent 70%);
       border-radius: 50%;
-      pointer-events: none;
-      animation: pulse-ring 4s ease-in-out infinite .5s;
     }
 
-    @keyframes pulse-ring {
-      0%, 100% { transform: translateY(-50%) scale(1); opacity: .5; }
-      50%       { transform: translateY(-50%) scale(1.06); opacity: 1; }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-    }
+    .hero-content { position: relative; z-index: 2; max-width: 640px; }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: .78rem;
+      font-size: .75rem;
       font-weight: 600;
-      letter-spacing: .1em;
+      letter-spacing: .09em;
       text-transform: uppercase;
-      color: var(--celeste);
-      background: rgba(56,189,248,.12);
-      border: 1px solid rgba(56,189,248,.3);
+      color: #93C5FD;
+      background: rgba(37,99,235,.15);
+      border: 1px solid rgba(37,99,235,.3);
       border-radius: 99px;
-      padding: 6px 16px;
-      margin-bottom: 28px;
-      animation: fadeInDown .8s ease both;
+      padding: 5px 14px;
+      margin-bottom: 26px;
+      animation: fadeDown .7s ease both;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-16px); }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-14px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     .hero-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
       font-weight: 800;
-      color: var(--white);
+      color: var(--blanco);
       line-height: 1.1;
-      margin-bottom: 24px;
-      animation: fadeInUp .9s ease .15s both;
+      margin-bottom: 22px;
+      animation: fadeUp .8s ease .15s both;
     }
 
     .hero-title span {
-      background: linear-gradient(90deg, var(--celeste) 0%, #93C5FD 100%);
+      background: linear-gradient(90deg, #60A5FA 0%, #93C5FD 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .hero-sub {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,.72);
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.68);
       line-height: 1.75;
-      margin-bottom: 40px;
-      max-width: 560px;
-      animation: fadeInUp .9s ease .3s both;
+      margin-bottom: 38px;
+      max-width: 520px;
+      animation: fadeUp .8s ease .28s both;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(24px); }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     .hero-ctas {
       display: flex;
-      align-items: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      animation: fadeInUp .9s ease .45s both;
+      animation: fadeUp .8s ease .42s both;
     }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      background: linear-gradient(135deg, var(--celeste) 0%, var(--celeste-dark) 100%);
+      gap: 8px;
+      background: var(--azul);
       color: white;
       font-weight: 600;
-      font-size: .95rem;
-      padding: 13px 28px;
-      border-radius: var(--radius-md);
+      font-size: .93rem;
+      padding: 12px 26px;
+      border-radius: var(--r-md);
       border: none;
       cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
-      box-shadow: 0 4px 20px rgba(14,165,233,.4);
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 18px rgba(37,99,235,.38);
       font-family: var(--font-body);
     }
 
     .btn-primary:hover {
+      background: var(--azul-dark);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(14,165,233,.5);
+      box-shadow: 0 7px 24px rgba(37,99,235,.48);
     }
 
-    .btn-outline {
+    .btn-ghost {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
       background: transparent;
-      color: rgba(255,255,255,.85);
+      color: rgba(255,255,255,.8);
       font-weight: 600;
-      font-size: .95rem;
-      padding: 13px 28px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.25);
+      font-size: .93rem;
+      padding: 12px 26px;
+      border-radius: var(--r-md);
+      border: 1px solid rgba(255,255,255,.22);
       cursor: pointer;
       transition: background .2s, border-color .2s, color .2s;
       font-family: var(--font-body);
     }
 
-    .btn-outline:hover {
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.5);
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.45);
       color: white;
     }
 
-    /* Stats en hero */
+    /* Stats */
     .hero-stats {
       display: flex;
-      gap: 40px;
-      margin-top: 60px;
+      gap: 36px;
+      margin-top: 52px;
       flex-wrap: wrap;
-      animation: fadeInUp .9s ease .6s both;
+      animation: fadeUp .8s ease .55s both;
     }
 
-    .hero-stat-item {
-      display: flex;
-      flex-direction: column;
-    }
+    .hero-stat { display: flex; flex-direction: column; }
 
-    .hero-stat-number {
-      font-family: var(--font-heading);
-      font-size: 2rem;
+    .hero-stat-n {
+      font-family: var(--font-head);
+      font-size: 1.9rem;
       font-weight: 800;
-      color: var(--celeste);
+      color: #60A5FA;
       line-height: 1;
     }
 
-    .hero-stat-label {
-      font-size: .8rem;
-      color: rgba(255,255,255,.55);
-      margin-top: 4px;
+    .hero-stat-l {
+      font-size: .78rem;
+      color: rgba(255,255,255,.45);
+      margin-top: 3px;
     }
 
     /* ===================================================
-       SECCIÓN 2 — NOSOTROS  (#nosotros)
+       SECCIÓN 2 — NOSOTROS (#nosotros)
     =================================================== */
     #nosotros {
-      padding: 100px 0;
-      background: var(--grey-50);
+      padding: 96px 0;
+      background: var(--gris-50);
       position: relative;
       overflow: hidden;
     }
 
-    #nosotros::before {
+    #nosotros::after {
       content: '';
       position: absolute;
-      top: -120px;
-      right: -120px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(56,189,248,.08) 0%, transparent 70%);
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(37,99,235,.06) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -479,108 +439,91 @@
     .nosotros-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 56px;
       align-items: center;
     }
 
-    .nosotros-visual {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Forma decorativa tipo "pantalla/panel" */
-    .visual-card-main {
-      width: 100%;
-      max-width: 400px;
-      background: linear-gradient(145deg, var(--celeste-deep) 0%, #0F172A 100%);
-      border-radius: var(--radius-xl);
-      padding: 40px 36px;
+    /* Tarjeta visual izquierda */
+    .nos-card {
+      background: linear-gradient(145deg, var(--azul-dark) 0%, var(--gris-900) 100%);
+      border-radius: var(--r-xl);
+      padding: 38px 34px;
       color: white;
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow-lg);
     }
 
-    .visual-card-main::before {
+    .nos-card::before {
       content: '';
       position: absolute;
-      top: -40px;
-      right: -40px;
-      width: 160px;
-      height: 160px;
-      background: rgba(56,189,248,.15);
+      top: -50px; right: -50px;
+      width: 180px; height: 180px;
+      background: rgba(37,99,235,.18);
       border-radius: 50%;
     }
 
-    .visual-card-icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(56,189,248,.2);
-      border-radius: var(--radius-md);
+    .nos-card-icon {
+      width: 58px; height: 58px;
+      background: rgba(96,165,250,.18);
+      border-radius: var(--r-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      margin-bottom: 24px;
-      color: var(--celeste);
+      font-size: 1.65rem;
+      color: #93C5FD;
+      margin-bottom: 20px;
     }
 
-    .visual-card-main h3 {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 800;
+    .nos-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
       margin-bottom: 12px;
       position: relative;
     }
 
-    .visual-card-main p {
-      font-size: .9rem;
+    .nos-card p {
+      font-size: .88rem;
       line-height: 1.7;
-      color: rgba(255,255,255,.72);
+      color: rgba(255,255,255,.68);
       position: relative;
     }
 
-    .visual-pills {
+    .nos-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
+      gap: 7px;
+      margin-top: 22px;
       position: relative;
     }
 
-    .visual-pill {
-      font-size: .75rem;
+    .nos-pill {
+      font-size: .72rem;
       font-weight: 600;
-      background: rgba(56,189,248,.18);
-      color: var(--celeste);
-      border: 1px solid rgba(56,189,248,.3);
+      background: rgba(96,165,250,.15);
+      color: #93C5FD;
+      border: 1px solid rgba(96,165,250,.28);
       border-radius: 99px;
-      padding: 4px 12px;
+      padding: 3px 11px;
     }
 
-    /* Badge flotante */
-    .visual-badge {
+    .nos-badge {
       position: absolute;
-      bottom: -20px;
-      right: -20px;
+      bottom: -18px; right: -18px;
       background: white;
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      box-shadow: var(--shadow-card);
+      border-radius: var(--r-md);
+      padding: 12px 16px;
+      box-shadow: var(--shadow-sm);
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: .82rem;
+      gap: 9px;
+      font-size: .8rem;
       font-weight: 600;
-      color: var(--grey-800);
-      min-width: 150px;
+      color: var(--gris-800);
     }
 
-    .visual-badge-dot {
-      width: 10px;
-      height: 10px;
+    .nos-badge-dot {
+      width: 9px; height: 9px;
       background: #22C55E;
       border-radius: 50%;
       flex-shrink: 0;
@@ -589,122 +532,115 @@
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
-      50%       { opacity: .3; }
+      50%       { opacity: .25; }
     }
 
-    .nosotros-content .section-sub {
-      margin-bottom: 28px;
-    }
+    /* Texto derecha */
+    .nos-text .section-sub { margin-bottom: 26px; }
 
-    .nosotros-list {
+    .nos-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 13px;
     }
 
-    .nosotros-list li {
+    .nos-list li {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      font-size: .95rem;
-      color: var(--grey-600);
+      gap: 11px;
+      font-size: .93rem;
+      color: var(--gris-600);
       line-height: 1.6;
     }
 
-    .nosotros-list li i {
-      color: var(--celeste-dark);
+    .nos-list li i {
+      color: var(--azul);
+      font-size: .85rem;
       margin-top: 3px;
       flex-shrink: 0;
-      font-size: .9rem;
     }
 
     /* ===================================================
-       SECCIÓN 3 — SERVICIOS  (#servicios)
+       SECCIÓN 3 — SERVICIOS (#servicios)
     =================================================== */
     #servicios {
-      padding: 100px 0;
-      background: var(--white);
+      padding: 96px 0;
+      background: var(--blanco);
     }
 
     .servicios-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 22px;
     }
 
-    .servicio-card {
-      background: var(--white);
-      border: 1px solid var(--grey-200);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
+    .serv-card {
+      background: var(--blanco);
+      border: 1px solid var(--gris-200);
+      border-radius: var(--r-lg);
+      padding: 30px 26px;
       position: relative;
       overflow: hidden;
       transition: transform .3s, box-shadow .3s, border-color .3s;
-      cursor: default;
     }
 
-    .servicio-card::before {
+    .serv-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--celeste) 0%, var(--celeste-deep) 100%);
+      background: linear-gradient(90deg, var(--azul) 0%, #60A5FA 100%);
       transform: scaleX(0);
-      transition: transform .3s ease;
       transform-origin: left;
+      transition: transform .3s ease;
     }
 
-    .servicio-card:hover {
-      transform: translateY(-6px);
+    .serv-card:hover {
+      transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
       border-color: transparent;
     }
 
-    .servicio-card:hover::before {
-      transform: scaleX(1);
-    }
+    .serv-card:hover::before { transform: scaleX(1); }
 
-    .servicio-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(56,189,248,.12) 0%, rgba(14,165,233,.08) 100%);
+    .serv-icon {
+      width: 52px; height: 52px;
+      border-radius: var(--r-md);
+      background: var(--azul-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      color: var(--celeste-dark);
-      margin-bottom: 20px;
-      transition: background .3s;
+      font-size: 1.4rem;
+      color: var(--azul);
+      margin-bottom: 18px;
+      transition: background .3s, color .3s;
     }
 
-    .servicio-card:hover .servicio-icon {
-      background: linear-gradient(135deg, var(--celeste) 0%, var(--celeste-deep) 100%);
+    .serv-card:hover .serv-icon {
+      background: var(--azul);
       color: white;
     }
 
-    .servicio-card h3 {
-      font-size: 1.1rem;
+    .serv-card h3 {
+      font-size: 1.05rem;
       font-weight: 700;
-      color: var(--grey-900);
-      margin-bottom: 10px;
+      color: var(--gris-900);
+      margin-bottom: 8px;
     }
 
-    .servicio-card p {
-      font-size: .88rem;
-      color: var(--grey-600);
+    .serv-card p {
+      font-size: .86rem;
+      color: var(--gris-600);
       line-height: 1.65;
     }
 
     /* ===================================================
-       SECCIÓN 4 — POR QUÉ ELEGIRNOS  (#por-que)
+       SECCIÓN 4 — POR QUÉ ELEGIRNOS (#por-que)
     =================================================== */
     #por-que {
-      padding: 100px 0;
-      background: linear-gradient(160deg, var(--grey-900) 0%, var(--celeste-deep) 100%);
+      padding: 96px 0;
+      background: var(--gris-900);
       position: relative;
       overflow: hidden;
     }
@@ -713,296 +649,226 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(56,189,248,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,.05) 1px, transparent 1px);
-      background-size: 60px 60px;
+      background-image: radial-gradient(rgba(37,99,235,.08) 1px, transparent 1px);
+      background-size: 32px 32px;
     }
 
-    #por-que .section-title,
-    #por-que .section-tag {
-      color: white;
+    #por-que .section-title { color: white; }
+    #por-que .section-sub   { color: rgba(255,255,255,.55); }
+    #por-que .tag {
+      background: rgba(37,99,235,.18);
+      border-color: rgba(37,99,235,.35);
+      color: #93C5FD;
     }
 
-    #por-que .section-tag {
-      background: rgba(255,255,255,.1);
-      border-color: rgba(255,255,255,.2);
-      color: var(--celeste);
-    }
-
-    #por-que .section-sub {
-      color: rgba(255,255,255,.65);
-    }
-
-    .diferenciadores-grid {
+    .dif-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 24px;
       position: relative;
       z-index: 1;
     }
 
     .dif-card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: var(--radius-lg);
-      padding: 36px 30px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: var(--r-lg);
+      padding: 34px 28px;
+      backdrop-filter: blur(4px);
       transition: background .3s, transform .3s;
-      backdrop-filter: blur(6px);
     }
 
     .dif-card:hover {
-      background: rgba(255,255,255,.09);
-      transform: translateY(-5px);
+      background: rgba(255,255,255,.07);
+      transform: translateY(-4px);
     }
 
-    .dif-number {
-      font-family: var(--font-heading);
-      font-size: 3rem;
+    .dif-num {
+      font-family: var(--font-head);
+      font-size: 2.6rem;
       font-weight: 800;
-      color: rgba(56,189,248,.25);
+      color: rgba(37,99,235,.22);
       line-height: 1;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .dif-icon {
-      width: 52px;
-      height: 52px;
-      background: rgba(56,189,248,.15);
-      border-radius: var(--radius-md);
+      width: 48px; height: 48px;
+      background: rgba(96,165,250,.13);
+      border-radius: var(--r-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      color: var(--celeste);
-      margin-bottom: 20px;
+      font-size: 1.3rem;
+      color: #60A5FA;
+      margin-bottom: 18px;
     }
 
     .dif-card h3 {
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       font-weight: 700;
       color: white;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     .dif-card p {
-      font-size: .88rem;
-      color: rgba(255,255,255,.62);
+      font-size: .86rem;
+      color: rgba(255,255,255,.55);
       line-height: 1.65;
     }
 
     /* ===================================================
-       SECCIÓN 5 — TESTIMONIOS  (#opiniones)
+       SECCIÓN 5 — TESTIMONIOS (#opiniones)
     =================================================== */
     #opiniones {
-      padding: 100px 0;
-      background: var(--grey-50);
-      position: relative;
-      overflow: hidden;
+      padding: 96px 0;
+      background: var(--gris-50);
     }
 
-    #opiniones::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      left: -100px;
-      width: 360px;
-      height: 360px;
-      background: radial-gradient(circle, rgba(56,189,248,.07) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .testimonios-grid {
+    .test-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 22px;
     }
 
-    .testimonio-card {
+    .test-card {
       background: white;
-      border: 1px solid var(--grey-200);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      position: relative;
+      border: 1px solid var(--gris-200);
+      border-radius: var(--r-lg);
+      padding: 30px 26px;
       transition: box-shadow .3s, transform .3s;
     }
 
-    .testimonio-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-4px);
-    }
+    .test-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
 
-    .testimonio-stars {
+    .test-stars {
       display: flex;
-      gap: 4px;
+      gap: 3px;
       color: #F59E0B;
-      font-size: .9rem;
-      margin-bottom: 16px;
+      font-size: .88rem;
+      margin-bottom: 14px;
     }
 
-    .testimonio-text {
-      font-size: .92rem;
-      color: var(--grey-600);
+    .test-text {
+      font-size: .9rem;
+      color: var(--gris-600);
       line-height: 1.72;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       font-style: italic;
     }
 
-    .testimonio-text::before {
+    .test-text::before {
       content: '"';
-      font-size: 2.5rem;
-      color: var(--celeste);
+      font-size: 2.2rem;
+      color: var(--azul);
       font-family: Georgia, serif;
       line-height: 0;
-      vertical-align: -0.5em;
-      margin-right: 4px;
+      vertical-align: -.45em;
+      margin-right: 3px;
     }
 
-    .testimonio-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .test-author { display: flex; align-items: center; gap: 11px; }
 
-    .testimonio-avatar {
-      width: 44px;
-      height: 44px;
+    .test-avatar {
+      width: 42px; height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--celeste) 0%, var(--celeste-deep) 100%);
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-dark) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: .95rem;
+      font-size: .9rem;
       color: white;
       flex-shrink: 0;
     }
 
-    .testimonio-info strong {
-      display: block;
-      font-size: .9rem;
-      font-weight: 700;
-      color: var(--grey-900);
-    }
-
-    .testimonio-info span {
-      font-size: .8rem;
-      color: var(--grey-400);
-    }
+    .test-info strong { display: block; font-size: .88rem; font-weight: 700; color: var(--gris-900); }
+    .test-info span   { font-size: .78rem; color: var(--gris-400); }
 
     /* ===================================================
-       SECCIÓN 6 — CONTACTO  (#contacto)
+       SECCIÓN 6 — CONTACTO (#contacto)
     =================================================== */
-    #contacto {
-      padding: 100px 0;
-      background: var(--white);
-    }
+    #contacto { padding: 96px 0; background: var(--blanco); }
 
     .contacto-grid {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 60px;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 56px;
       align-items: start;
     }
 
-    .contacto-info-title {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
+    .c-info-title {
+      font-family: var(--font-head);
+      font-size: 1.45rem;
       font-weight: 800;
-      color: var(--grey-900);
-      margin-bottom: 16px;
+      color: var(--gris-900);
+      margin-bottom: 14px;
     }
 
-    .contacto-info-sub {
-      font-size: .92rem;
-      color: var(--grey-600);
+    .c-info-sub {
+      font-size: .9rem;
+      color: var(--gris-600);
       line-height: 1.7;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
-    .contacto-items {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+    .c-items { display: flex; flex-direction: column; gap: 16px; }
 
-    .contacto-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
+    .c-item { display: flex; align-items: flex-start; gap: 13px; }
 
-    .contacto-item-icon {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, rgba(56,189,248,.12) 0%, rgba(14,165,233,.08) 100%);
-      border-radius: var(--radius-sm);
+    .c-item-icon {
+      width: 42px; height: 42px;
+      background: var(--azul-light);
+      border-radius: var(--r-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--celeste-dark);
-      font-size: 1rem;
+      color: var(--azul);
+      font-size: .95rem;
       flex-shrink: 0;
     }
 
-    .contacto-item-text strong {
-      display: block;
-      font-size: .85rem;
-      font-weight: 700;
-      color: var(--grey-900);
-      margin-bottom: 2px;
-    }
-
-    .contacto-item-text span {
-      font-size: .88rem;
-      color: var(--grey-600);
-    }
+    .c-item-text strong { display: block; font-size: .83rem; font-weight: 700; color: var(--gris-900); margin-bottom: 1px; }
+    .c-item-text span   { font-size: .86rem; color: var(--gris-600); }
 
     /* Formulario */
-    .contacto-form {
-      background: var(--grey-50);
-      border: 1px solid var(--grey-200);
-      border-radius: var(--radius-xl);
-      padding: 40px 36px;
+    .c-form {
+      background: var(--gris-50);
+      border: 1px solid var(--gris-200);
+      border-radius: var(--r-xl);
+      padding: 36px 32px;
     }
 
-    .form-title {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
+    .c-form-title {
+      font-family: var(--font-head);
+      font-size: 1.18rem;
       font-weight: 800;
-      color: var(--grey-900);
-      margin-bottom: 24px;
+      color: var(--gris-900);
+      margin-bottom: 22px;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-    .form-group {
-      margin-bottom: 16px;
-    }
+    .form-group { margin-bottom: 14px; }
 
     .form-group label {
       display: block;
-      font-size: .82rem;
+      font-size: .8rem;
       font-weight: 600;
-      color: var(--grey-600);
-      margin-bottom: 6px;
+      color: var(--gris-600);
+      margin-bottom: 5px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 11px 14px;
-      border: 1px solid var(--grey-200);
-      border-radius: var(--radius-sm);
-      font-size: .9rem;
+      padding: 10px 13px;
+      border: 1px solid var(--gris-200);
+      border-radius: var(--r-sm);
+      font-size: .88rem;
       font-family: var(--font-body);
-      color: var(--grey-800);
+      color: var(--gris-800);
       background: white;
       outline: none;
       transition: border-color .2s, box-shadow .2s;
@@ -1011,241 +877,179 @@
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: var(--celeste-dark);
-      box-shadow: 0 0 0 3px rgba(14,165,233,.12);
+      border-color: var(--azul);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.1);
     }
 
-    .form-group textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
+    .form-group textarea { min-height: 105px; resize: vertical; }
 
-    .form-submit {
+    .form-btn {
       width: 100%;
-      padding: 14px;
-      background: linear-gradient(135deg, var(--celeste) 0%, var(--celeste-dark) 100%);
+      padding: 13px;
+      background: var(--azul);
       color: white;
       font-weight: 700;
-      font-size: .95rem;
+      font-size: .93rem;
       border: none;
-      border-radius: var(--radius-md);
+      border-radius: var(--r-md);
       cursor: pointer;
-      transition: opacity .2s, transform .2s;
+      transition: background .2s, transform .2s;
       font-family: var(--font-body);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      box-shadow: 0 4px 16px rgba(14,165,233,.35);
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(37,99,235,.3);
     }
 
-    .form-submit:hover {
-      opacity: .9;
-      transform: translateY(-1px);
-    }
+    .form-btn:hover { background: var(--azul-dark); transform: translateY(-1px); }
 
     /* ===================================================
        FOOTER
     =================================================== */
-    footer {
-      background: var(--grey-900);
-      padding: 60px 0 32px;
-    }
+    footer { background: var(--gris-900); padding: 56px 0 28px; }
 
     .footer-top {
       display: grid;
       grid-template-columns: 1.6fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
+      gap: 44px;
+      margin-bottom: 44px;
     }
 
-    .footer-brand {
-      max-width: 300px;
-    }
+    .ft-brand { max-width: 300px; }
 
-    .footer-logo {
+    .ft-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .footer-logo-icon {
-      width: 34px;
-      height: 34px;
-      background: linear-gradient(135deg, var(--celeste) 0%, var(--celeste-deep) 100%);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: .9rem;
-      font-weight: 800;
-    }
-
-    .footer-logo-text {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: white;
-    }
-
-    .footer-logo-text span { color: var(--celeste); }
-
-    .footer-desc {
-      font-size: .87rem;
-      color: rgba(255,255,255,.5);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 10px;
-    }
-
-    .footer-social-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,.6);
-      font-size: .9rem;
-      transition: background .2s, color .2s;
-      cursor: pointer;
-    }
-
-    .footer-social-btn:hover {
-      background: var(--celeste-dark);
-      color: white;
-      border-color: transparent;
-    }
-
-    .footer-col h4 {
-      font-size: .82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: rgba(255,255,255,.5);
+      gap: 9px;
       margin-bottom: 16px;
     }
 
-    .footer-links {
-      list-style: none;
+    .ft-logo-mark {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-dark) 100%);
+      border-radius: var(--r-sm);
       display: flex;
-      flex-direction: column;
-      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--font-head);
+      font-size: .85rem;
+      font-weight: 800;
     }
 
-    .footer-links li a {
-      font-size: .87rem;
-      color: rgba(255,255,255,.55);
-      transition: color .2s;
+    .ft-logo-text { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: white; }
+    .ft-logo-text span { color: #60A5FA; }
+
+    .ft-desc { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.7; margin-bottom: 22px; }
+
+    .ft-socials { display: flex; gap: 9px; }
+
+    .ft-soc {
+      width: 34px; height: 34px;
+      border-radius: var(--r-sm);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.09);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.5);
+      font-size: .88rem;
+      cursor: pointer;
+      transition: background .2s, color .2s;
     }
 
-    .footer-links li a:hover { color: var(--celeste); }
+    .ft-soc:hover { background: var(--azul); color: white; border-color: transparent; }
 
-    .footer-divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,.07);
-      margin-bottom: 24px;
+    .ft-col h4 {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 14px;
     }
 
-    .footer-bottom {
+    .ft-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .ft-links a { font-size: .85rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .ft-links a:hover { color: #60A5FA; }
+
+    .ft-divider { border: none; border-top: 1px solid rgba(255,255,255,.06); margin-bottom: 22px; }
+
+    .ft-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
-    .footer-copy {
-      font-size: .82rem;
-      color: rgba(255,255,255,.35);
-    }
+    .ft-copy { font-size: .8rem; color: rgba(255,255,255,.3); }
 
-    .footer-dev {
-      font-size: .78rem;
-      color: rgba(255,255,255,.28);
-      margin-top: 4px;
-    }
-
-    .footer-dev a {
-      color: var(--celeste);
-      text-decoration: none;
-      transition: opacity .2s;
-    }
-
-    .footer-dev a:hover {
-      opacity: .75;
-    }
-
-    .footer-dev strong {
-      color: inherit;
-      font-weight: 600;
-    }
-
-    .footer-legal {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-legal a {
-      font-size: .82rem;
-      color: rgba(255,255,255,.35);
-      transition: color .2s;
-    }
-
-    .footer-legal a:hover { color: var(--celeste); }
-
-
+    .ft-dev { font-size: .76rem; color: rgba(255,255,255,.25); }
+    .ft-dev a { color: #60A5FA; text-decoration: none; transition: opacity .2s; }
+    .ft-dev a:hover { opacity: .7; }
 
     /* ===================================================
-       RESPONSIVE — TABLET
+       BANNER DEMO
+    =================================================== */
+    #demo-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2000;
+      background: linear-gradient(90deg, #1E293B 0%, #1D4ED8 100%);
+      border-top: 1px solid rgba(37,99,235,.4);
+      padding: 9px 48px 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s ease;
+    }
+
+    #demo-banner.hidden { transform: translateY(100%); }
+
+    .demo-txt { font-size: .8rem; color: rgba(255,255,255,.82); font-weight: 500; }
+    .demo-txt strong { color: #93C5FD; }
+
+    .demo-close {
+      position: absolute;
+      right: 14px;
+      background: rgba(255,255,255,.1);
+      border: none;
+      color: white;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: .72rem;
+      transition: background .2s;
+      font-family: var(--font-body);
+    }
+
+    .demo-close:hover { background: rgba(255,255,255,.22); }
+
+    /* ===================================================
+       RESPONSIVE
     =================================================== */
     @media (max-width: 900px) {
-      .nosotros-grid { grid-template-columns: 1fr; }
-      .nosotros-visual { order: -1; }
-      .visual-card-main { max-width: 100%; }
-
-      .contacto-grid { grid-template-columns: 1fr; }
-
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-brand {
-        grid-column: 1 / -1;
-        max-width: 100%;
-      }
+      .nosotros-grid  { grid-template-columns: 1fr; }
+      .nos-card       { order: -1; }
+      .contacto-grid  { grid-template-columns: 1fr; }
+      .footer-top     { grid-template-columns: 1fr 1fr; }
+      .ft-brand       { grid-column: 1 / -1; max-width: 100%; }
     }
 
-    /* ===================================================
-       RESPONSIVE — MOBILE
-    =================================================== */
     @media (max-width: 600px) {
       :root { --nav-h: 56px; }
-
-      .nav-tab { padding: 8px 10px; font-size: .8rem; }
-
-      .hero-shape, .hero-shape-2, .hero-shape-3 { display: none; }
-
-      .form-row { grid-template-columns: 1fr; }
-
+      .nav-tab { padding: 7px 9px; font-size: .78rem; }
+      .hero-deco { display: none; }
+      .form-row  { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-stats { gap: 24px; }
-
-      .contacto-form { padding: 28px 20px; }
+      .ft-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { gap: 22px; }
+      .c-form { padding: 24px 18px; }
     }
   </style>
 </head>
@@ -1257,19 +1061,18 @@
   <nav id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="container nav-inner">
 
-      <!-- Logo -->
-      <a href="#inicio" class="nav-logo" aria-label="Teleuno inicio">
-        <img src="logoteleuno.png" alt="Teleuno" class="nav-logo-img" />
+      <a href="#inicio" class="nav-logo" aria-label="Jyrtyc inicio">
+        <div class="nav-logo-mark">J</div>
+        <span class="nav-logo-text">Jyr<span>tyc</span></span>
       </a>
 
-      <!-- Pestañas de navegación -->
       <div class="nav-tabs" role="tablist">
-        <button class="nav-tab active" data-target="inicio" role="tab" aria-selected="true">Inicio</button>
-        <button class="nav-tab" data-target="nosotros" role="tab" aria-selected="false">Nosotros</button>
-        <button class="nav-tab" data-target="servicios" role="tab" aria-selected="false">Servicios</button>
-        <button class="nav-tab" data-target="por-que" role="tab" aria-selected="false">¿Por qué nosotros?</button>
-        <button class="nav-tab" data-target="opiniones" role="tab" aria-selected="false">Opiniones</button>
-        <button class="nav-tab" data-target="contacto" role="tab" aria-selected="false">Contacto</button>
+        <button class="nav-tab active" data-target="inicio"    role="tab" aria-selected="true">Inicio</button>
+        <button class="nav-tab"        data-target="nosotros"  role="tab" aria-selected="false">Nosotros</button>
+        <button class="nav-tab"        data-target="servicios" role="tab" aria-selected="false">Servicios</button>
+        <button class="nav-tab"        data-target="por-que"   role="tab" aria-selected="false">¿Por qué nosotros?</button>
+        <button class="nav-tab"        data-target="opiniones" role="tab" aria-selected="false">Opiniones</button>
+        <button class="nav-tab"        data-target="contacto"  role="tab" aria-selected="false">Contacto</button>
       </div>
 
     </div>
@@ -1280,53 +1083,58 @@
   =================================================== -->
   <section id="inicio">
     <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-shape"></div>
-    <div class="hero-shape-2"></div>
-    <div class="hero-shape-3"></div>
+    <div class="hero-dots"></div>
+
+    <!-- Decoración anillos -->
+    <div class="hero-deco" aria-hidden="true">
+      <div class="hero-deco-ring"></div>
+      <div class="hero-deco-ring"></div>
+      <div class="hero-deco-ring"></div>
+      <div class="hero-deco-center"></div>
+    </div>
 
     <div class="container">
       <div class="hero-content">
 
         <span class="hero-badge">
-          <i class="fa-solid fa-location-dot"></i>
-          Mallorca · Illes Balears
+          <i class="fa-solid fa-store"></i>
+          Mayorista · Madrid · Desde 1988
         </span>
 
         <h1 class="hero-title">
-          Equipamiento hotelero<br />
-          de <span>máxima calidad</span>
+          Todo para tu<br />
+          <span>mercería,</span> en un solo proveedor
         </h1>
 
         <p class="hero-sub">
-          Teleuno, empresa líder en Mallorca en el suministro de equipamiento para
-          hostelería. Griferías sostenibles, accesorios de baño, espejos, secadores,
-          minibares y televisores para tu cadena, hotel o apartamentos.
+          Almacenes Jyrtyc, distribuidor mayorista de mercería con más de 35 años de
+          experiencia. Miles de referencias en mercería, paquetería, complementos y
+          labores, con distribución en Madrid y alrededores.
         </p>
 
         <div class="hero-ctas">
           <a href="#servicios" class="btn-primary">
-            <i class="fa-solid fa-layer-group"></i>
+            <i class="fa-solid fa-boxes-stacked"></i>
             Ver productos
           </a>
-          <a href="#contacto" class="btn-outline">
-            <i class="fa-solid fa-envelope"></i>
-            Contáctanos
+          <a href="#contacto" class="btn-ghost">
+            <i class="fa-solid fa-file-invoice"></i>
+            Solicitar presupuesto
           </a>
         </div>
 
         <div class="hero-stats">
-          <div class="hero-stat-item">
-            <span class="hero-stat-number">+500</span>
-            <span class="hero-stat-label">Hoteles equipados</span>
+          <div class="hero-stat">
+            <span class="hero-stat-n">+35</span>
+            <span class="hero-stat-l">Años de experiencia</span>
           </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number">25+</span>
-            <span class="hero-stat-label">Años de experiencia</span>
+          <div class="hero-stat">
+            <span class="hero-stat-n">+2000</span>
+            <span class="hero-stat-l">Referencias de producto</span>
           </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number">6</span>
-            <span class="hero-stat-label">Líneas de producto</span>
+          <div class="hero-stat">
+            <span class="hero-stat-n">1988</span>
+            <span class="hero-stat-l">Año de fundación</span>
           </div>
         </div>
 
@@ -1341,63 +1149,56 @@
     <div class="container">
       <div class="nosotros-grid">
 
-        <!-- Visual decorativa -->
-        <div class="nosotros-visual fade-up">
-          <div class="visual-card-main">
-            <div class="visual-card-icon">
-              <i class="fa-solid fa-hotel"></i>
-            </div>
-            <h3>Líderes en Mallorca</h3>
+        <!-- Tarjeta visual -->
+        <div class="nos-visual fade-up" style="position:relative;">
+          <div class="nos-card">
+            <div class="nos-card-icon"><i class="fa-solid fa-shop"></i></div>
+            <h3>Mayorista de confianza en Madrid</h3>
             <p>
-              Más de dos décadas equipando los mejores hoteles, cadenas y 
-              apartamentos turísticos de las Illes Balears con productos 
-              de primera calidad.
+              Desde nuestro almacén en el distrito de Carabanchel, servimos a mercerías,
+              tiendas de complementos y negocios de toda la Comunidad de Madrid con un
+              catálogo completo y actualizado.
             </p>
-            <div class="visual-pills">
-              <span class="visual-pill">Griferías</span>
-              <span class="visual-pill">Espejos</span>
-              <span class="visual-pill">Minibares</span>
-              <span class="visual-pill">TV Hotelera</span>
-              <span class="visual-pill">Secadores</span>
-              <span class="visual-pill">Accesorios</span>
+            <div class="nos-pills">
+              <span class="nos-pill">Mercería</span>
+              <span class="nos-pill">Paquetería</span>
+              <span class="nos-pill">Complementos</span>
+              <span class="nos-pill">Ropa interior</span>
+              <span class="nos-pill">Hogar</span>
+              <span class="nos-pill">Labores</span>
             </div>
           </div>
-          <div class="visual-badge">
-            <div class="visual-badge-dot"></div>
-            Servicio activo en Mallorca
+          <div class="nos-badge">
+            <div class="nos-badge-dot"></div>
+            Servicio activo en Madrid
           </div>
         </div>
 
         <!-- Texto -->
-        <div class="nosotros-content">
-          <span class="section-tag"><i class="fa-solid fa-circle-info"></i> Quiénes somos</span>
-          <h2 class="section-title">Tu socio de confianza en equipamiento hotelero</h2>
+        <div class="nos-text fade-up">
+          <span class="tag"><i class="fa-solid fa-circle-info"></i> Quiénes somos</span>
+          <h2 class="section-title">Distribución mayorista rápida y de trato cercano</h2>
           <p class="section-sub">
-            Teleuno nació con una misión clara: proporcionar a los establecimientos
-            turísticos de las Illes Balears los equipos y accesorios que sus huéspedes
-            merecen, combinando confort, diseño y sostenibilidad.
+            Almacenes Jyrtyc nació en 1988 con un objetivo claro: ofrecer a las mercerías
+            y comercios de Madrid el mejor surtido de productos al por mayor, con un servicio
+            eficaz y el trato cercano de siempre.
           </p>
 
-          <ul class="nosotros-list">
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Amplio catálogo de griferías que favorecen el <strong>consumo sostenible del agua</strong> sin sacrificar el confort.</span>
+          <ul class="nos-list">
+            <li><i class="fa-solid fa-circle-check"></i>
+              <span>Equipo humano con décadas de experiencia en el sector, dispuesto a asesorarte con <strong>cercanía y profesionalidad</strong>.</span>
             </li>
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Accesorios de baño, espejos y secadores seleccionados para <strong>maximizar la satisfacción del huésped</strong>.</span>
+            <li><i class="fa-solid fa-circle-check"></i>
+              <span>Completísimo muestrario de mercería y paquetería con las <strong>últimas novedades</strong> del mercado.</span>
             </li>
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Minibares y televisores hoteleros con <strong>tecnología actual</strong> y consumo energético optimizado.</span>
+            <li><i class="fa-solid fa-circle-check"></i>
+              <span>Red comercial propia para que puedas consultar y pedir <strong>desde donde estés</strong>: tienda, online o teléfono.</span>
             </li>
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Asesoramiento <strong>personalizado y cercano</strong>: te ayudamos a elegir lo que mejor se adapta a tu establecimiento.</span>
+            <li><i class="fa-solid fa-circle-check"></i>
+              <span>Presupuestos sin compromiso para la <strong>apertura de nuevas mercerías</strong>, con orientación completa.</span>
             </li>
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              <span>Presencia directa en <strong>Mallorca</strong> para una respuesta rápida y un servicio postventa eficaz.</span>
+            <li><i class="fa-solid fa-circle-check"></i>
+              <span>Logística y reparto propios en <strong>Madrid y comunidades limítrofes</strong>, garantizando plazos de entrega ágiles.</span>
             </li>
           </ul>
         </div>
@@ -1412,70 +1213,62 @@
   <section id="servicios">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-grid-2"></i> Nuestros productos</span>
+        <span class="tag"><i class="fa-solid fa-grid-2"></i> Nuestro catálogo</span>
         <h2 class="section-title">Todo lo que necesita tu establecimiento</h2>
         <p class="section-sub">
-          Desde el baño hasta la habitación, suministramos cada equipo y accesorio
-          que garantiza una experiencia de calidad a tus huéspedes.
+          Un catálogo amplio y actualizado dividido en categorías claras para que
+          encuentres siempre lo que buscas.
         </p>
       </div>
 
       <div class="servicios-grid">
 
-        <!-- Tarjeta 1 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-faucet-drip"></i></div>
-          <h3>Griferías Sostenibles</h3>
-          <p>Griferías de alta gama que combinan diseño elegante con tecnología de ahorro hídrico. Reduci el consumo de agua sin comprometer la experiencia del huésped.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3>Mercería General</h3>
+          <p>Agujas, alfileres, imperdibles, botones, cremalleras, velcro, gomas elásticas, cintería, encajes, puntillas, cordonería y mucho más.</p>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-soap"></i></div>
-          <h3>Accesorios de Baño</h3>
-          <p>Portarrollos, toalleros, jaboneras, dosificadores y complementos de baño de materiales premium. Dotaciones completas para el confort y la higiene del huésped.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Adornos y Peinados</h3>
+          <p>Diademas, horquillas, pasadores, coleteros, pinzas, moñitas, blisters de pelo y accesorios para el cabello de las mejores marcas.</p>
         </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-circle-half-stroke"></i></div>
-          <h3>Espejos Hoteleros</h3>
-          <p>Espejos con retroiluminación LED, aumento de precisión y diseños que se integran perfectamente en cualquier concepto de baño, desde clásico hasta contemporáneo.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-shirt"></i></div>
+          <h3>Complementos de Moda</h3>
+          <p>Bufandas, cinturones, guantes, pañuelos, gorros, manoplas, plantillas, tirantes y accesorios de temporada para tiendas de ropa y complementos.</p>
         </div>
 
-        <!-- Tarjeta 4 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-wind"></i></div>
-          <h3>Secadores de Cabello</h3>
-          <p>Secadores de pared de bajo consumo y alta potencia, resistentes al uso intensivo. Modelos adaptables a cualquier configuración de baño hotelero.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-sock"></i></div>
+          <h3>Ropa Interior y Calcetería</h3>
+          <p>Bragas, slips, sujetadores, camisetas, calcetines, medias, pantys, leotardos, fajas y ropa interior para toda la familia.</p>
         </div>
 
-        <!-- Tarjeta 5 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-snowflake"></i></div>
-          <h3>Minibares</h3>
-          <p>Minibares de gran capacidad, silenciosos y eficientes energéticamente. Diseñados para integrarse en el mobiliario de habitación sin ocupar espacio visual.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-house-heart"></i></div>
+          <h3>Hogar y Textil</h3>
+          <p>Baberos, manteles, tapetes y accesorios del hogar de uso cotidiano, ideales para mercerías con sección de artículos domésticos.</p>
         </div>
 
-        <!-- Tarjeta 6 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-tv"></i></div>
-          <h3>Televisores Hoteleros</h3>
-          <p>Smart TV de hostelería con sistema IPTV, interfaz personalizable con la imagen de tu hotel, conectividad completa y soporte para plataformas de streaming.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Labores y Costura</h3>
+          <p>Aros de bordar, bastidores, hilos de costura, encajeras, accesorios para punto de cruz y todo lo necesario para el mundo de las labores.</p>
         </div>
 
-        <!-- Tarjeta 7 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-universal-access"></i></div>
-          <h3>Ayudas Técnicas</h3>
-          <p>Equipamiento adaptado para habitaciones accesibles: barras de apoyo, asientos de ducha, griferías adaptadas y accesorios que garantizan la autonomía del huésped.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <h3>Presupuesto para Apertura</h3>
+          <p>Asesoramos y facilitamos presupuestos completos para la apertura de nuevas mercerías. Sin compromiso, con orientación personalizada de nuestro equipo.</p>
         </div>
 
-        <!-- Tarjeta 8 -->
-        <div class="servicio-card fade-up">
-          <div class="servicio-icon"><i class="fa-solid fa-handshake"></i></div>
-          <h3>Asesoramiento Integral</h3>
-          <p>Te acompañamos desde la planificación hasta la instalación final. Conocemos el sector hotelero de Mallorca y te ofrecemos soluciones a medida para tu negocio.</p>
+        <div class="serv-card fade-up">
+          <div class="serv-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Distribución en Madrid</h3>
+          <p>Red logística propia para abastecer a clientes dentro de la Comunidad de Madrid y alrededores. Pedidos por teléfono, online o en nuestra tienda física.</p>
         </div>
 
       </div>
@@ -1488,51 +1281,35 @@
   <section id="por-que">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-star"></i> Nuestras ventajas</span>
-        <h2 class="section-title">¿Por qué elegir Teleuno?</h2>
+        <span class="tag"><i class="fa-solid fa-star"></i> Nuestras ventajas</span>
+        <h2 class="section-title">¿Por qué elegir Almacenes Jyrtyc?</h2>
         <p class="section-sub">
-          En un sector tan competitivo como la hostelería, cada detalle cuenta.
-          Estas son las razones por las que los mejores hoteles de Mallorca confían en nosotros.
+          Más de tres décadas en el sector nos avalan. Estas son las razones por las
+          que cientos de mercerías y comercios madrileños confían en nosotros.
         </p>
       </div>
 
-      <div class="diferenciadores-grid">
+      <div class="dif-grid">
 
-        <!-- Diferenciador 1 -->
         <div class="dif-card fade-up">
-          <div class="dif-number">01</div>
-          <div class="dif-icon"><i class="fa-solid fa-medal"></i></div>
-          <h3>Especialistas en hotelería</h3>
-          <p>
-            No somos un distribuidor genérico. Todo nuestro catálogo está 
-            seleccionado específicamente para el entorno hotelero: durabilidad, 
-            estética, facilidad de mantenimiento y satisfacción del huésped.
-          </p>
+          <div class="dif-num">01</div>
+          <div class="dif-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Más de 35 años de experiencia</h3>
+          <p>Fundados en 1988, conocemos el sector de la mercería como nadie. Nuestra trayectoria nos permite anticipar las necesidades de nuestros clientes y ofrecer siempre los mejores productos.</p>
         </div>
 
-        <!-- Diferenciador 2 -->
         <div class="dif-card fade-up">
-          <div class="dif-number">02</div>
-          <div class="dif-icon"><i class="fa-solid fa-leaf"></i></div>
-          <h3>Compromiso sostenible</h3>
-          <p>
-            Priorizamos productos con certificaciones de eficiencia hídrica y 
-            energética. Ayudamos a tu establecimiento a reducir costes operativos 
-            y mejorar tu huella medioambiental, un valor cada vez más apreciado por 
-            los viajeros.
-          </p>
+          <div class="dif-num">02</div>
+          <div class="dif-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Trato eficaz, cordial y familiar</h3>
+          <p>Somos un equipo humano cercano que te atiende con la misma cordialidad de siempre. Sin burocracia, sin esperas, con la confianza de hablar con alguien que conoce tu negocio.</p>
         </div>
 
-        <!-- Diferenciador 3 -->
         <div class="dif-card fade-up">
-          <div class="dif-number">03</div>
-          <div class="dif-icon"><i class="fa-solid fa-map-pin"></i></div>
-          <h3>Cercanía y respuesta rápida</h3>
-          <p>
-            Equipo local en Mallorca con conocimiento profundo del mercado 
-            turístico balear. Atención personalizada, entrega ágil y soporte 
-            postventa directo, sin intermediarios ni tiempos de espera largos.
-          </p>
+          <div class="dif-num">03</div>
+          <div class="dif-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3>Catálogo amplio y siempre actualizado</h3>
+          <p>Contamos con las últimas novedades en mercería y paquetería a través de nuestra red comercial, para que tu tienda esté siempre al día con los artículos que demandan tus clientes.</p>
         </div>
 
       </div>
@@ -1545,79 +1322,71 @@
   <section id="opiniones">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-comments"></i> Opiniones</span>
+        <span class="tag"><i class="fa-solid fa-comments"></i> Opiniones</span>
         <h2 class="section-title">Lo que dicen nuestros clientes</h2>
         <p class="section-sub">
-          Hoteles y establecimientos de las Illes Balears que ya confían en 
-          Teleuno para equipar sus instalaciones.
+          Mercerías y comercios de Madrid que llevan años trabajando con Almacenes Jyrtyc.
         </p>
       </div>
 
-      <div class="testimonios-grid">
+      <div class="test-grid">
 
-        <!-- Testimonio 1 -->
-        <div class="testimonio-card fade-up">
-          <div class="testimonio-stars">
+        <div class="test-card fade-up">
+          <div class="test-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonio-text">
-            Llevamos tres años trabajando con Teleuno para todas nuestras 
-            renovaciones de baño. La calidad de las griferías y accesorios 
-            es excelente, y el equipo nos asesoró perfectamente para elegir 
-            modelos sostenibles que han reducido nuestro consumo de agua en 
-            un 20 %.
+          <p class="test-text">
+            Llevamos más de diez años surtiendo nuestra mercería exclusivamente con
+            Jyrtyc. El catálogo es enorme, siempre tienen lo que busco y los pedidos
+            llegan sin fallos. Un proveedor de confianza de verdad.
           </p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar">MC</div>
-            <div class="testimonio-info">
-              <strong>Marta Coll</strong>
-              <span>Directora — Hotel Cala Blava, Llucmajor</span>
+          <div class="test-author">
+            <div class="test-avatar">RP</div>
+            <div class="test-info">
+              <strong>Rosa Palomino</strong>
+              <span>Propietaria — Mercería El Dedal, Leganés</span>
             </div>
           </div>
         </div>
 
-        <!-- Testimonio 2 -->
-        <div class="testimonio-card fade-up">
-          <div class="testimonio-stars">
+        <div class="test-card fade-up">
+          <div class="test-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonio-text">
-            Los televisores hoteleros que nos suministraron son exactamente 
-            lo que necesitábamos: robustos, con sistema IPTV personalizado 
-            con nuestra marca y sencillos de gestionar remotamente. El servicio 
-            postventa en Mallorca es rápido y eficaz.
+          <p class="test-text">
+            Cuando abrí mi mercería me ayudaron con el presupuesto inicial completo
+            y me orientaron sobre qué referencias no pueden faltar. Sin ellos no habría
+            podido arrancar tan bien. El trato es inmejorable.
           </p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar">JR</div>
-            <div class="testimonio-info">
-              <strong>Joan Riera</strong>
-              <span>Gerente — Apartamentos Tramuntana, Sóller</span>
+          <div class="test-author">
+            <div class="test-avatar">MT</div>
+            <div class="test-info">
+              <strong>Manuel Torres</strong>
+              <span>Gerente — Mercería Manos Creativas, Móstoles</span>
             </div>
           </div>
         </div>
 
-        <!-- Testimonio 3 -->
-        <div class="testimonio-card fade-up">
-          <div class="testimonio-stars">
+        <div class="test-card fade-up">
+          <div class="test-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-regular fa-star"></i>
           </div>
-          <p class="testimonio-text">
-            Reformamos 80 habitaciones y Teleuno nos gestionó todo el suministro: 
-            espejos con LED, minibares silenciosos y secadores de pared. Todo llegó 
-            en plazo, bien embalado y con la instalación perfectamente coordinada. 
-            Muy recomendable.
+          <p class="test-text">
+            Muy buen proveedor. Los precios son competitivos, el surtido de adornos
+            y peinados es de los mejores que he visto, y siempre me avisan cuando
+            hay novedades. El servicio online también funciona muy bien.
           </p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar">AB</div>
-            <div class="testimonio-info">
-              <strong>Ana Bauzà</strong>
-              <span>Jefa de Compras — Grupo Hotelero Ponent, Palma</span>
+          <div class="test-author">
+            <div class="test-avatar">CV</div>
+            <div class="test-info">
+              <strong>Carmen Vidal</strong>
+              <span>Responsable de compras — Multimercería Centro, Madrid</span>
             </div>
           </div>
         </div>
@@ -1632,60 +1401,59 @@
   <section id="contacto">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Contacto</span>
-        <h2 class="section-title">Hablemos de tu proyecto</h2>
+        <span class="tag"><i class="fa-solid fa-paper-plane"></i> Contacto</span>
+        <h2 class="section-title">Estamos aquí para ayudarte</h2>
         <p class="section-sub">
-          ¿Tienes un hotel, cadena o apartamentos que quieres equipar? 
-          Escríbenos y te asesoramos sin compromiso.
+          ¿Necesitas presupuesto, tienes dudas sobre un producto o quieres abrir
+          una mercería? Escríbenos o llámanos sin compromiso.
         </p>
       </div>
 
       <div class="contacto-grid">
 
-        <!-- Datos de contacto -->
+        <!-- Info -->
         <div class="fade-up">
-          <h3 class="contacto-info-title">Estamos en Mallorca, cerca de ti</h3>
-          <p class="contacto-info-sub">
-            Nuestro equipo está disponible para visitas, consultas técnicas y 
-            presupuestos personalizados. No dudes en contactarnos por cualquiera 
-            de estos canales.
+          <h3 class="c-info-title">Tu distribuidor de mercería en Madrid</h3>
+          <p class="c-info-sub">
+            Visítanos en nuestro almacén, llámanos o escríbenos. Nuestro equipo
+            te atenderá de forma rápida y personalizada.
           </p>
 
-          <div class="contacto-items">
-            <div class="contacto-item">
-              <div class="contacto-item-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="contacto-item-text">
+          <div class="c-items">
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="c-item-text">
                 <strong>Dirección</strong>
-                <span>Polígono Son Castelló, Palma de Mallorca, 07009 — Illes Balears</span>
+                <span>C/ Belvís de la Jara, 19 – Local · 28025 Madrid</span>
               </div>
             </div>
-            <div class="contacto-item">
-              <div class="contacto-item-icon"><i class="fa-solid fa-phone"></i></div>
-              <div class="contacto-item-text">
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="c-item-text">
                 <strong>Teléfono</strong>
-                <span>+34 971 00 00 00</span>
+                <span>91 462 47 61 / 91 462 78 35</span>
               </div>
             </div>
-            <div class="contacto-item">
-              <div class="contacto-item-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="contacto-item-text">
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="c-item-text">
                 <strong>Email</strong>
-                <span>info@teleuno.net</span>
+                <span>jyrtyc@jyrtyc.com</span>
               </div>
             </div>
-            <div class="contacto-item">
-              <div class="contacto-item-icon"><i class="fa-solid fa-clock"></i></div>
-              <div class="contacto-item-text">
-                <strong>Horario de atención</strong>
-                <span>Lunes a viernes, de 08:30 a 18:00 h</span>
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="c-item-text">
+                <strong>Horario</strong>
+                <span>Lunes a viernes, de 09:00 a 14:00 y de 16:00 a 19:00 h</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Formulario -->
-        <div class="contacto-form fade-up">
-          <h3 class="form-title">Solicita información o presupuesto</h3>
+        <div class="c-form fade-up">
+          <h3 class="c-form-title">Solicita información o presupuesto</h3>
           <form onsubmit="handleForm(event)">
             <div class="form-row">
               <div class="form-group">
@@ -1699,26 +1467,26 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" placeholder="+34 6XX XXX XXX" />
+                <label for="tel">Teléfono</label>
+                <input type="tel" id="tel" placeholder="6XX XXX XXX" />
               </div>
               <div class="form-group">
-                <label for="tipo">Tipo de establecimiento</label>
+                <label for="tipo">Tipo de consulta</label>
                 <select id="tipo">
                   <option value="">Selecciona...</option>
-                  <option>Hotel independiente</option>
-                  <option>Cadena hotelera</option>
-                  <option>Apartamentos turísticos</option>
-                  <option>Hostal / Pensión</option>
+                  <option>Presupuesto de compra</option>
+                  <option>Apertura de mercería</option>
+                  <option>Información de productos</option>
+                  <option>Condiciones de mayorista</option>
                   <option>Otro</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" placeholder="Describe tu proyecto, número de habitaciones, productos que necesitas..." required></textarea>
+              <label for="msg">Mensaje *</label>
+              <textarea id="msg" placeholder="Cuéntanos qué necesitas: productos, cantidades, tipo de negocio..." required></textarea>
             </div>
-            <button type="submit" class="form-submit">
+            <button type="submit" class="form-btn">
               <i class="fa-solid fa-paper-plane"></i>
               Enviar consulta
             </button>
@@ -1737,158 +1505,144 @@
 
       <div class="footer-top">
 
-        <!-- Brand -->
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-icon">T</div>
-            <span class="footer-logo-text">tele<span>uno</span></span>
+        <div class="ft-brand">
+          <div class="ft-logo">
+            <div class="ft-logo-mark">J</div>
+            <span class="ft-logo-text">Almacenes <span>Jyrtyc</span></span>
           </div>
-          <p class="footer-desc">
-            Empresa líder en Mallorca en el suministro de equipamiento 
-            para hostelería. Tu establecimiento, perfectamente equipado.
+          <p class="ft-desc">
+            Distribuidor mayorista de mercería en Madrid desde 1988.
+            Servicio rápido, trato familiar y el catálogo más completo del sector.
           </p>
-          <div class="footer-socials">
-            <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <div class="ft-socials">
+            <a href="#" class="ft-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="ft-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="ft-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="ft-soc" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
 
-        <!-- Productos -->
-        <div class="footer-col">
+        <div class="ft-col">
           <h4>Productos</h4>
-          <ul class="footer-links">
-            <li><a href="#servicios">Griferías</a></li>
-            <li><a href="#servicios">Accesorios de baño</a></li>
-            <li><a href="#servicios">Espejos hoteleros</a></li>
-            <li><a href="#servicios">Secadores</a></li>
-            <li><a href="#servicios">Minibares</a></li>
-            <li><a href="#servicios">Televisores</a></li>
+          <ul class="ft-links">
+            <li><a href="#servicios">Mercería General</a></li>
+            <li><a href="#servicios">Adornos y Peinados</a></li>
+            <li><a href="#servicios">Complementos de Moda</a></li>
+            <li><a href="#servicios">Ropa Interior</a></li>
+            <li><a href="#servicios">Hogar y Textil</a></li>
+            <li><a href="#servicios">Labores y Costura</a></li>
           </ul>
         </div>
 
-        <!-- Empresa -->
-        <div class="footer-col">
+        <div class="ft-col">
           <h4>Empresa</h4>
-          <ul class="footer-links">
+          <ul class="ft-links">
             <li><a href="#nosotros">Quiénes somos</a></li>
-            <li><a href="#por-que">Por qué Teleuno</a></li>
+            <li><a href="#por-que">Por qué Jyrtyc</a></li>
             <li><a href="#opiniones">Opiniones</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Cómo comprar</a></li>
           </ul>
         </div>
 
       </div>
 
-      <hr class="footer-divider" />
+      <hr class="ft-divider" />
 
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2025 Teleuno · Todos los derechos reservados · Palma de Mallorca, Illes Balears</p>
-        <p class="footer-dev">Desarrollado por <a href="https://moiraordo.es/" target="_blank" rel="noopener noreferrer"><strong>Moira Ordo</strong></a></p>
-        <div class="footer-legal">
-          <a href="#">Aviso legal</a>
-          <a href="#">Cookies</a>
-          <a href="#">Privacidad</a>
-        </div>
+      <div class="ft-bottom">
+        <p class="ft-copy">© 2025 Almacenes Jyrtyc · Todos los derechos reservados · C/ Belvís de la Jara, 19 · 28025 Madrid</p>
+        <p class="ft-dev">Desarrollado por <a href="https://moiraordo.es/" target="_blank" rel="noopener noreferrer"><strong>Moira Ordo</strong></a></p>
       </div>
 
     </div>
   </footer>
 
-
+  <!-- ===================================================
+       BANNER DEMO
+  =================================================== -->
+  <div id="demo-banner" role="alert">
+    <span class="demo-txt">
+      <strong>⚡ Demo orientativa</strong> — Tu web real se adapta completamente a tus necesidades
+    </span>
+    <button class="demo-close" onclick="closeBanner()" aria-label="Cerrar banner">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
 
   <!-- ===================================================
        JAVASCRIPT
   =================================================== -->
   <script>
-    /* -------------------------------------------------
-       1. NAVBAR: sombra al hacer scroll
-    ------------------------------------------------- */
+    /* 1. Sombra en navbar al hacer scroll */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
 
-    /* -------------------------------------------------
-       2. NAVEGACIÓN POR PESTAÑAS: clic → smooth scroll
-    ------------------------------------------------- */
-    const tabs = document.querySelectorAll('.nav-tab');
-
-    tabs.forEach(tab => {
+    /* 2. Clic en pestaña → scroll suave */
+    document.querySelectorAll('.nav-tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        const target = document.getElementById(tab.dataset.target);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        const el = document.getElementById(tab.dataset.target);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
-    /* -------------------------------------------------
-       3. ACTUALIZAR PESTAÑA ACTIVA con IntersectionObserver
-    ------------------------------------------------- */
+    /* 3. IntersectionObserver → pestaña activa por sección */
+    const tabs = document.querySelectorAll('.nav-tab');
     const sections = document.querySelectorAll('section[id]');
 
-    const observerOptions = {
-      root: null,
+    const navObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          tabs.forEach(t => {
+            const active = t.dataset.target === id;
+            t.classList.toggle('active', active);
+            t.setAttribute('aria-selected', active);
+          });
+          const activeTab = document.querySelector(`.nav-tab[data-target="${id}"]`);
+          if (activeTab) activeTab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+        }
+      });
+    }, {
       rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) + 10}px 0px -55% 0px`,
       threshold: 0
-    };
+    });
 
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          tabs.forEach(t => {
-            const isActive = t.dataset.target === id;
-            t.classList.toggle('active', isActive);
-            t.setAttribute('aria-selected', isActive);
-          });
+    sections.forEach(s => navObs.observe(s));
 
-          // Scroll automático en móvil para que la pestaña activa sea visible
-          const activeTab = document.querySelector(`.nav-tab[data-target="${id}"]`);
-          if (activeTab) {
-            activeTab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-          }
+    /* 4. Animaciones fade-up con IntersectionObserver */
+    const fadeObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObs.unobserve(e.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    sections.forEach(s => navObserver.observe(s));
+    document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
 
-    /* -------------------------------------------------
-       4. ANIMACIONES DE ENTRADA (fade-up)
-    ------------------------------------------------- */
-    const fadeEls = document.querySelectorAll('.fade-up');
+    /* 5. Cerrar banner demo */
+    function closeBanner() {
+      document.getElementById('demo-banner').classList.add('hidden');
+    }
 
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    fadeEls.forEach(el => fadeObserver.observe(el));
-
-    /* -------------------------------------------------
-       5. FORMULARIO: feedback visual
-    ------------------------------------------------- */
+    /* 6. Formulario: feedback visual de envío */
     function handleForm(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      const original = btn.innerHTML;
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Mensaje enviado!';
+      const btn = e.target.querySelector('.form-btn');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Consulta enviada!';
       btn.style.background = 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)';
       btn.disabled = true;
       setTimeout(() => {
-        btn.innerHTML = original;
+        btn.innerHTML = orig;
         btn.style.background = '';
         btn.disabled = false;
         e.target.reset();
-      }, 3200);
+      }, 3000);
     }
   </script>
 
@@ -1896,34 +1650,32 @@
 </html>
 
 <!-- =====================================================
-     DIAGNÓSTICO WEB ACTUAL (teleuno.net):
-     La web no fue accesible para análisis automático,
-     pero a partir de la información del cliente se infieren
-     los siguientes puntos de mejora habituales en webs
-     del sector:
+     DIAGNÓSTICO WEB ACTUAL (jyrtyc.com):
 
-     PUNTOS DÉBILES DETECTADOS (web actual):
-     - Diseño probablemente estático, no mobile-first
-     - Navegación posiblemente basada en páginas separadas
-       sin smooth scroll ni estado activo visual
-     - Falta de jerarquía visual clara (hero, CTA principal)
-     - Textos descriptivos sin estructura de beneficios
-     - Posiblemente sin sección de testimonios ni prueba social
-     - Paleta de colores sin consistencia ni impacto visual
-     - Sin animaciones de entrada ni microinteracciones
+     PUNTOS DÉBILES DETECTADOS:
+     - Diseño de principios de los 2000, no responsive ni mobile-first
+     - Estructura basada en tablas HTML, sin jerarquía visual clara
+     - Navegación confusa con login de usuario en la cabecera principal
+     - Sin sección hero ni CTA claros para nuevos visitantes
+     - Imágenes GIF animadas obsoletas como elementos decorativos
+     - Sin prueba social (testimonios, valoraciones)
+     - Sin sección diferenciadora de "por qué elegirnos"
+     - Formulario de presupuesto oculto tras proceso de registro
+     - Bajo contraste tipográfico, difícil lectura en móvil
+     - Sin animaciones ni microinteracciones modernas
 
      MEJORAS APLICADAS EN ESTA DEMO:
-     ✓ Diseño mobile-first 100 % responsive
-     ✓ Hero impactante con estadísticas y CTA claros
-     ✓ Navegación sticky con pestañas, IntersectionObserver
-       y scroll automático de la pestaña activa en móvil
-     ✓ Sección "Nosotros" con tarjeta visual decorativa
-     ✓ Grid de 8 categorías de producto con tarjetas hover
-     ✓ Sección "Por qué elegirnos" con diferenciadores claros
-     ✓ Testimonios realistas del sector hotelero balear
-     ✓ Formulario con feedback visual de envío
-     ✓ Paleta celeste/blanco cohesionada y profesional
-     ✓ Animaciones suaves con CSS + IntersectionObserver
-     ✓ Banner demo no invasivo con cierre
-     ✓ Footer completo con redes sociales y enlaces legales
+     ✓ Diseño 100% responsive mobile-first con tipografía legible
+     ✓ Hero de impacto con eslogan, estadísticas y CTAs claros
+     ✓ Acceso directo al presupuesto sin obligar a registro
+     ✓ Sección "Nosotros" con valores y diferenciadores en lista
+     ✓ Catálogo organizado en 8 tarjetas de categoría visual
+     ✓ Sección "Por qué elegirnos" con 3 pilares destacados
+     ✓ Testimonios realistas del sector mercería en Madrid
+     ✓ Formulario de contacto con feedback visual de envío
+     ✓ Datos reales de contacto (dirección, teléfono, email)
+     ✓ Navegación sticky con pestañas e IntersectionObserver
+     ✓ Animaciones suaves de entrada al hacer scroll
+     ✓ Paleta azul/gris/blanco limpia y profesional
+     ✓ Footer completo con redes, enlaces legales y crédito
 ===================================================== -->
